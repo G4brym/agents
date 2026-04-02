@@ -58,7 +58,7 @@ export class AiSearchContextProvider implements ContextProvider {
       } catch (err) {
         await this.binding.create({
           id: this.config.id,
-          hybrid_search_enabled: this.config.hybridSearch
+          index_method: { vector: false, keyword: true }
         });
       }
     } catch (err) {
